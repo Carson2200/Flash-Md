@@ -1,7 +1,7 @@
 import cron from 'node-cron';
 import axios from 'axios';
 
-const url = 'PUT YOUR RENDER APP LINK OR URL HERE';
+const url = 'PUT URL HERE';
 
 cron.schedule('*/14 * * * *', async () => {
   try {

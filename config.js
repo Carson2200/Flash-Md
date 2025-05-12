@@ -18,7 +18,9 @@ const conf = {
   PRESENCE_GROUP: process.env.GROUP_PRESENCE || "paused",
   MODE: process.env.MODE || "private",
   AV: process.env.AV || "on",
-  PREFIXES: process.env.PREFIX ? process.env.PREFIX.split(",").map(p => p.trim()).filter(p => p) : [],
+  PREFIXES: process.env.PREFIX !== undefined 
+  ? process.env.PREFIX.split(",").map(p => p.trim()) 
+  : [""], 
   Session: process.env.SESSION || "",
   NUMBER: process.env.OWNER_NUMBER || "",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || "",
